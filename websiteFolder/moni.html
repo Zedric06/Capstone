@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoring and Compliance Dashboard</title>
+    <link rel="stylesheet" href="moni.css">
+</head>
+<body>
+    <div class="hamburger" id="hamburger">&#9776;</div>
+    <div class="sidebar" id="sidebar">
+        <h2>Food and Safety</h2>
+        <a href="moni.html"><i class="fas fa-store"></i> <span>Market Monitoring and Compliance</span></a>
+        <a href="review.html"><i class="fas fa-store"></i> <span>Market Rating and Review</span></a>
+        <a href="inspect.html"><i class="fas fa-store"></i> <span>Market Inspection Results</span></a>
+        <a href="permit.html"><i class="fas fa-store"></i> <span>Market Certificates and Permits</span></a>
+        <a href="#"><i class="fas fa-store"></i> <span>Market Category</span></a>
+        <a href="#"><i class="fas fa-sign-out-alt"></i> <span>Logout</span></a>
+    
+        <!-- Toggle Button -->
+        <div class="toggle-btn" id="toggle-btn">
+            <i class="fas fa-chevron-left"></i>
+        </div>
+    </div>
+    <div class="container">
+        <header>
+            <h1>Monitoring and Compliance Dashboard</h1>
+            <input type="text" id="search" placeholder="Search...">
+        </header>
+        <div class="grid">
+            <div class="card" id="metric1">
+                <h2>Total Compliance</h2>
+                <p class="value">50</p>
+            </div>
+            <div class="card" id="metric2">
+                <h2>Pending Requests</h2>
+                <p class="value">50</p>
+            </div>
+            <div class="card" id="metric3">
+                <h2>Approved Requests</h2>
+                <p class="value">30</p>
+            </div>
+            <div class="card" id="metric4">
+                <h2>Rejected Requests</h2>
+                <p class="value">35</p>
+            </div>
+        </div>
+        <div class="table-container">
+            <table id="complianceTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Table rows will be populated here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="moni.js"></script>
+</body>
+<script>
+    // Sidebar Toggle Functionality
+  const toggleBtn = document.getElementById('toggle-btn');
+  const sidebar = document.getElementById('sidebar');
+  const content = document.getElementById('content');
+  const hamburger = document.getElementById('hamburger');
+
+  function toggleSidebar() {
+      sidebar.classList.toggle('collapsed');
+      content.classList.toggle('collapsed');
+
+      // Toggle button icon
+      const icon = toggleBtn.querySelector('i');
+      if (sidebar.classList.contains('collapsed')) {
+          icon.classList.remove('fa-chevron-left');
+          icon.classList.add('fa-chevron-right');
+      } else {
+          icon.classList.remove('fa-chevron-right');
+          icon.classList.add('fa-chevron-left');
+      }
+  }
+
+  toggleBtn.addEventListener('click', toggleSidebar);
+  hamburger.addEventListener('click', toggleSidebar);
+</script>
+</html>

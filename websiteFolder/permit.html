@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Certificates and Permits</title>
+    <link rel="stylesheet" href="permit.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Market Certificates and Permits</h1>
+        </header>
+        <main>
+            <form id="certificateForm">
+                <h2>Apply for a Certificate</h2>
+                <input type="text" id="name" placeholder="Full Name" required>
+                <input type="text" id="businessName" placeholder="Business Name" required>
+                <input type="text" id="licenseNumber" placeholder="License Number" required>
+                <textarea id="description" placeholder="Description" required></textarea>
+                <button type="submit">Submit Application</button>
+            </form>
+            <div id="applications">
+                <h2>Pending Applications</h2>
+                <ul id="applicationList"></ul>
+            </div>
+        </main>
+    </div>
+    <script src="permit.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Review Application</title>
+    <link rel="stylesheet" href="review.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Food Reviewing</h1>
+        </header>
+
+        <form id="review-form">
+            <input type="text" id="food-name" placeholder="Food Item" required>
+            <textarea id="review-text" placeholder="Write your review..." required></textarea>
+            <div class="rating">
+                <label for="rating">Rating:</label>
+                <select id="rating" required>
+                    <option value="">Select Rating</option>
+                    <option value="5">⭐⭐⭐⭐⭐</option>
+                    <option value="4">⭐⭐⭐⭐</option>
+                    <option value="3">⭐⭐⭐</option>
+                    <option value="2">⭐⭐</option>
+                    <option value="1">⭐</option>
+                </select>
+            </div>
+            <button type="submit">Submit Review</button>
+        </form>
+
+        <div id="reviews-container">
+            <h2>Citizen Reviews</h2>
+            <ul id="reviews-list"></ul>
+        </div>
+    </div>
+
+    <script src="review.js"></script>
+</body>
+</html>
+                
